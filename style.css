@@ -454,186 +454,162 @@ ul{
     text-align: center;
     font-size: 100px;
 }
-/* ================= MOBILE & TABLET SUPPORT ================= */
-@media (max-width: 400px) {
+
+@media screen and (max-width: 768px) {
     html{
     scroll-snap-type: none;
-  }
+    scroll-behavior: smooth;
+}
 
-  section{
+section{
     scroll-snap-align: none;
-  }
-
 }
 
-  body {
-    overflow-x: hidden;
-  }
+    /* ONLY fix contact section height */
+    .contact {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 60px;
+    }
 
-  /* ---------- HERO ---------- */
-/* Fix Hero Text Overflow on Mobile */
-#h1 {
-  font-size: 32px;
-  line-height: 1.2;
-  text-align: center;
+    /* Fix contact spacing */
+    #p3 {
+        margin-bottom: 40px;
+    }
 
-  display: block;        /* remove flex */
-  width: 100%;
+    /* Remove negative form offset */
+    .form-container {
+        margin-top: 20px !important;
+        margin-right: 0;
+        align-items: center;
+    }
 
-  padding: 0 15px;
+    /* Keep contact links horizontal */
+    .contact-info {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
 
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  font-size: clamp(28px, 6vw, 80px);
-}
+        margin-left: 0;
+        height: auto;
+        width: 100%;
+    }
 
-#p1 {
-  font-size: 14px;
-  text-align: center;
-  padding: 0 15px;
-}
+    .contact-info a {
+        margin: 0;
+        justify-content: center;
+    }
 
-  .btn {
-    flex-direction: column;
-    gap: 12px;
-  }
+    /* Responsive form */
+    .contact-form {
+        width: 100%;
+        max-width: 95%;
+        align-items: stretch;
+    }
 
-.arrow {
-  filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 1));
-  position: absolute;
+    .form-header input,
+    .form-header textarea {
+        width: 100%;
+        font-size: 14px;
+    }
 
-  top: 350px;     /* always visible */
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 26px;
-
-  opacity: 0.8;
-  z-index: 10;
-}
-
-  .abstract1,
-  .abstract2 {
-    width: 100%;
-    max-width: 400px;
-    opacity: 0.3;
-  }
-  .hero {
-  padding: 0 10px;
-}
-
-
-  /* ---------- ABOUT ---------- */
-  .About {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .about-grid {
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 40px;
-  }
-
-  .about-item {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    padding: 15px;
-  }
-
-  /* ---------- PROJECTS ---------- */
-  .projects {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  #ps {
-    font-size: 36px;
-    margin-top: 100px;
-  }
-
-  /* ---------- SKILLS ---------- */
-  .skills {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .li {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  /* ---------- CONTACT ---------- */
-  .contact {
-    height: auto;
-    padding: 40px 20px;
-  }
-
- .contact-info{
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;   /* CENTER */
-
-  gap: 18px;
-
-  margin: 30px auto;
-
-  height: auto;         /* IMPORTANT */
-
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.contact-info a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 12px;
-
-  text-decoration: none;
-  color: white;
-
-  width: 100%;
-}
-
-
-  .form-container {
-    margin: 40px auto 0;
-    width: 100%;
-  }
-
-  .contact-form {
-    max-width: 100%;
-    align-items: center;
-  }
-
-  .form-header {
-    width: 100%;
-  }
-
-  .form-header input,
-  .form-header textarea {
-    font-size: 14px;
-  }
-
-  /* ---------- FOOTER ---------- */
-  .footer {
-      height: auto;
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-  }
+    /* Center form */
+    .form-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
 }
+/* =========================
+   MOBILE FIX: HERO + ABOUT + SKILLS ONLY
+========================= */
+@media screen and (max-width: 768px) {
+
+    /* ================= HERO ================= */
+
+    #h1 {
+        font-size: 42px;
+        text-align: center;
+        padding: 0 15px;
+        line-height: 1.2;
+    }
+
+    #p1 {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .arrow {
+        position: relative;
+        bottom: 0;
+        margin-top: 30px;
+        margin-right: 80px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .About {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .about-grid {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .about-item {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .img {
+        width: 60px;
+    }
+
+    #p2 {
+        padding: 0 15px;
+        font-size: 16px;
+    }
+
+
+    /* ================= SKILLS ================= */
+
+    .skills {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* 1 column */
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    #h3 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .li {
+        width: 100%;
+        max-width: 260px;
+    }
+
+}
+}
+
+
+
 

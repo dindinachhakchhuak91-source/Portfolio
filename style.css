@@ -454,35 +454,132 @@ ul{
     text-align: center;
     font-size: 100px;
 }
-/* Mobile View */
+/* ================= MOBILE & TABLET SUPPORT ================= */
 @media (max-width: 768px) {
 
   body {
     overflow-x: hidden;
   }
 
-  .container {
+  /* ---------- HERO ---------- */
+  #h1 {
+    font-size: 36px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  #p1 {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .btn {
     flex-direction: column;
+    gap: 12px;
   }
 
-  .contact-form {
-    width: 90%;
+  .arrow {
+    bottom: 20px;
+    width: 22px;
   }
 
-  h1 {
-    font-size: 24px;
+  .abstract1,
+  .abstract2 {
+    width: 100%;
+    max-width: 400px;
+    opacity: 0.3;
   }
 
-  h2 {
-    font-size: 20px;
+  /* ---------- ABOUT ---------- */
+  .About {
+    height: auto;
+    padding: 40px 20px;
   }
 
-  p {
-    font-size: 14px;
+  .about-grid {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
   }
 
-  button {
+  .about-item {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding: 15px;
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .projects {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #ps {
+    font-size: 36px;
+    margin-top: 100px;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .li {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .contact-info {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info a {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .form-container {
+    margin: 40px auto 0;
     width: 100%;
   }
 
+  .contact-form {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .form-header {
+    width: 100%;
+  }
+
+  .form-header input,
+  .form-header textarea {
+    font-size: 14px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+      height: auto;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
 }
+

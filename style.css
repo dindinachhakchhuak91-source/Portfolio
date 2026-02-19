@@ -455,7 +455,7 @@ ul{
     font-size: 100px;
 }
 /* ================= MOBILE & TABLET SUPPORT ================= */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
 
   body {
     overflow-x: hidden;

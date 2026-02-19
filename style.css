@@ -456,6 +456,15 @@ ul{
 }
 /* ================= MOBILE & TABLET SUPPORT ================= */
 @media (max-width: 400px) {
+    html{
+    scroll-snap-type: none;
+  }
+
+  section{
+    scroll-snap-align: none;
+  }
+
+}
 
   body {
     overflow-x: hidden;

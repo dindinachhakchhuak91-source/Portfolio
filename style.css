@@ -462,17 +462,27 @@ ul{
   }
 
   /* ---------- HERO ---------- */
-  #h1 {
-    font-size: 36px;
-    text-align: center;
-    padding: 0 15px;
-  }
+/* Fix Hero Text Overflow on Mobile */
+#h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
 
-  #p1 {
-    font-size: 16px;
-    text-align: center;
-    padding: 0 15px;
-  }
+  display: block;        /* remove flex */
+  width: 100%;
+
+  padding: 0 15px;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: clamp(28px, 6vw, 80px);
+}
+
+#p1 {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 15px;
+}
 
   .btn {
     flex-direction: column;
@@ -490,6 +500,10 @@ ul{
     max-width: 400px;
     opacity: 0.3;
   }
+  .hero {
+  padding: 0 10px;
+}
+
 
   /* ---------- ABOUT ---------- */
   .About {

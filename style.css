@@ -522,9 +522,6 @@ section{
     }
 
 }
-/* =========================
-   MOBILE FIX: HERO + ABOUT + SKILLS ONLY
-========================= */
 @media screen and (max-width: 768px) {
 
     /* ================= HERO ================= */
@@ -608,7 +605,7 @@ section{
     }
 
 }
-}
+
 
 
 
